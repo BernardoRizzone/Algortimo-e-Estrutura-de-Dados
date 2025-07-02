@@ -1,0 +1,34 @@
+TAD Quadra
+    Atributos:
+        id: inteiro
+        tipo: string
+        preco_por_hora: decimal
+        disponibilidade: lista de intervalos de tempo
+
+    Métodos:
+        adicionar_horario_disponivel(inicio: Time, fim: Time)
+        remover_horario_disponivel(inicio: Time, fim: Time)
+        verificar_disponibilidade(inicio: Time, fim: Time): booleano
+
+TAD Reserva
+    Atributos:
+        id: inteiro
+        quadra_id: inteiro
+        usuario_id: inteiro
+        inicio: Time
+        fim: Time
+
+    Métodos:
+        confirmar_reserva()
+        cancelar_reserva()
+
+TAD Usuario
+    Atributos:
+        id: inteiro
+        nome: string
+        email: string
+        telefone: string
+
+    Métodos:
+        fazer_reserva(quadra: Quadra, inicio: Time, fim: Time)
+        cancelar_reserva(reserva: Reserva)
